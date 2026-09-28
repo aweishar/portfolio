@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container {
+    /* MODIFIED: Use vmin for width and height to scale proportionally */
+    /* The 80:96 ratio maintains the original 500:600px aspect ratio */
+    width: 80vmin;
+    height: 96vmin;
+
+    /* ADDED: Set max dimensions to prevent it from getting too large on big screens */
+    max-width: 500px;
+    max-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+}
+
+.menu {
+    /* MODIFIED: Use a percentage for height relative to the container */
+    height: 8.333%; /* This is 1/12th of the container height (like 50px was to 600px) */
+    
+    background-color: rgb(100, 150, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* MODIFIED: Use vmin for gaps and font size */
+    gap: 2vmin;
+    color: white;
+    font-size: 2.2vmin;
+    transition: background-color 0.3s ease;
+}
+
+#label {
+    margin: 0;
+    padding: 0;
+}
+
+#game-panel {
+    flex-grow: 1; /* Takes up remaining space */
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+
+    /* MODIFIED: Use vmin for gaps and padding */
+    gap: 0.8vmin;
+    background-color: #ffffff;
+    padding: 0.8vmin;
+}
+
+.light-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.light-button.on {
+    background-color: yellow;
+}
+
+.light-button.off {
+    background-color: black;
+}
+
+.menu button {
+    /* MODIFIED: Use vmin for font size, padding, and border radius */
+    font-size: 2vmin;
+    padding: 1vmin 2vmin;
+    border: 0.2vmin solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5vmin;
+}
+
+.menu button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.win-state {
+    background-color: green;
+}
+
+#bottom-menu {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    padding: 0 15px;      /* Adds some space on the sides */
+}
+
+#label {
+    flex-grow: 1;         /* Tells the label to take up all available space */
+    text-align: center;   /* Centers the text within the label's expanded space */
+    margin-right: 15px;   /* Adds a small gap next to the button */
+}
