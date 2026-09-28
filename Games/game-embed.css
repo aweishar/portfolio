@@ -1,0 +1,11 @@
+/* Preserve each game's native size, shrinking only on narrow screens. */
+body { min-height: 100vh; height: auto; padding: 16px; box-sizing: border-box; flex-direction: column; }
+.game-page-header { width: 100%; max-width: 1000px; margin-bottom: 20px; font: 14px/1.5 system-ui, sans-serif; }
+.conversion-note { margin: 0; padding: 12px 16px; background: #243044; color: #dce4ef; border-left: 3px solid #e7be70; border-radius: 4px; }
+h1 { max-width: 100%; text-align: center; font-size: clamp(18px, 4vw, 32px); }
+canvas { display: block; max-width: 100%; height: auto; box-sizing: border-box; }
+.game-container { max-width: 100%; }
+/* Disco Jump uses fixed DOM coordinates; scale the entire scene together. */
+@media (max-width: 370px) {
+    .game-container { zoom: 0.85; }
+}

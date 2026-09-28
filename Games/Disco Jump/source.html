@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco Jump — Java source</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../game-page.css?v=2">
+    <script src="../game-page.js" defer></script>
+    <link rel="stylesheet" href="../game-navigation.css?v=2">
+</head>
+<body>
+    <header class="page-header">
+        <nav class="page-navigation" aria-label="Game navigation">
+            <a href="../../index.html">← Back to portfolio</a>
+            <a href="discojump.html">Play Game</a>
+            <a href="source.html" aria-current="page">Show Code</a>
+        </nav>
+        <h1>Disco Jump</h1>
+    </header>
+    <main class="workspace">
+        <section class="source-panel" aria-labelledby="source-heading">
+            <div class="panel-header">
+                <h2 id="source-heading">Original Java source</h2>
+                <p>Select a file to view its original code.</p>
+            </div>
+            <nav class="source-files" aria-label="Java source files">
+                    <a href="Platforms.java" data-source>Platforms.java</a>
+                    <a href="Sprite.java" data-source>Sprite.java</a>
+                    <a href="SpriteTester.java" data-source>SpriteTester.java</a>
+            </nav>
+            <div class="file-toolbar">
+                <span id="file-name" aria-live="polite">Choose a file</span>
+                <a id="download-source" href="Platforms.java" download>Download Java</a>
+            </div>
+            <p id="source-status" role="status">Loading source…</p>
+            <pre id="source-viewer" tabindex="0" aria-label="Java source code"><code id="source-code"></code></pre>
+            <noscript>Select a file above to open the original Java source.</noscript>
+        </section>
+    </main>
+</body>
+</html>
