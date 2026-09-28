@@ -1,0 +1,22 @@
+/*
+ * project-details.css
+ * This file adds custom styles for the project detail pages.
+ */
+
+/* * Style the <pre> tag that contains our code.
+ * This makes it scrollable on both x and y axes 
+ * and sets a max height.
+ */
+pre[class*="language-"] {
+    max-height: 800px; /* Set a max height for large code files */
+    overflow: auto;   /* Add scrollbars if content overflows */
+    padding: 1.5rem;  /* Add some padding inside the code block */
+    font-size: 0.9em; /* Slightly smaller font for code */
+}
+
+/* * By default, Prism.js adds a margin, but we use Tailwind's
+ * mb-4 utility, so we can remove the default.
+ */
+pre[class*="language-"] {
+    margin: 0;
+}
