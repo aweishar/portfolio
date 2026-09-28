@@ -1,0 +1,9 @@
+/* Keep the original game coordinate systems while fitting their preview pane. */
+body { min-height: 100vh; height: auto; padding: 16px; box-sizing: border-box; }
+h1 { max-width: 100%; text-align: center; font-size: clamp(18px, 4vw, 32px); }
+canvas { display: block; max-width: 100%; height: auto; box-sizing: border-box; }
+.game-container { max-width: 100%; }
+/* Disco Jump uses fixed DOM coordinates; scale the entire scene together. */
+@media (max-width: 370px) {
+    .game-container { zoom: 0.85; }
+}
