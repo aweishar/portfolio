@@ -1,0 +1,75 @@
+:root {
+    color-scheme: light;
+    --jp-layout-color0: #fafafa;
+    --jp-layout-color1: #ffffff;
+}
+:root.dark {
+    color-scheme: dark;
+    --jp-layout-color0: #0a0a0a;
+    --jp-layout-color1: #171717;
+    --jp-layout-color2: #262626;
+    --jp-layout-color3: #404040;
+    --jp-border-color0: #525252;
+    --jp-border-color1: #404040;
+    --jp-border-color2: #333333;
+    --jp-border-color3: #262626;
+    --jp-content-font-color0: #fafafa;
+    --jp-content-font-color1: #e5e5e5;
+    --jp-content-font-color2: #b5b5b5;
+    --jp-content-font-color3: #a3a3a3;
+    --jp-ui-font-color0: #fafafa;
+    --jp-ui-font-color1: #e5e5e5;
+    --jp-ui-font-color2: #b5b5b5;
+    --jp-ui-font-color3: #a3a3a3;
+    --jp-content-link-color: #93c5fd;
+    --jp-cell-editor-background: #171717;
+    --jp-cell-editor-active-background: #262626;
+    --jp-cell-editor-border-color: #404040;
+    --jp-cell-inprompt-font-color: #a5b4fc;
+    --jp-cell-outprompt-font-color: #fdba74;
+    --jp-mirror-editor-variable-color: #e5e5e5;
+    --jp-mirror-editor-comment-color: #a3b1a7;
+    --jp-mirror-editor-keyword-color: #c4b5fd;
+    --jp-mirror-editor-operator-color: #93c5fd;
+    --jp-mirror-editor-punctuation-color: #d4d4d4;
+    --jp-mirror-editor-number-color: #fdba74;
+    --jp-mirror-editor-string-color: #86efac;
+    --jp-mirror-editor-builtin-color: #67e8f9;
+    --jp-mirror-editor-def-color: #93c5fd;
+    --jp-mirror-editor-error-color: #fca5a5;
+}
+html, body.jp-Notebook {
+    background-color: var(--jp-layout-color0);
+    color: var(--jp-content-font-color1);
+}
+.dark .jp-RenderedHTMLCommon table { color: #e5e5e5; }
+.dark .jp-RenderedHTMLCommon thead { border-bottom-color: #525252; }
+.dark .jp-RenderedHTMLCommon tbody tr:nth-child(odd) { background: #171717; }
+.dark .jp-RenderedHTMLCommon tbody tr:nth-child(even) { background: #262626; }
+.dark .jp-RenderedHTMLCommon tbody tr:hover { background: #333333; }
+.dark .jp-RenderedText pre { color: #e5e5e5; }
+/* Keep exported plot colors intact; only the notebook interface is themed. */
+
+.notebook-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid var(--jp-border-color2, #e5e7eb);
+    font: 14px/1.5 system-ui, sans-serif;
+}
+.notebook-toolbar a {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid var(--jp-border-color1, #d1d5db);
+    border-radius: 6px;
+    background: var(--jp-layout-color1);
+    color: var(--jp-content-font-color1);
+    text-decoration: none;
+    font-weight: 600;
+}
+.notebook-toolbar a:hover { text-decoration: underline; }
+.notebook-toolbar a:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+}
