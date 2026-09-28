@@ -1,1 +1,1 @@
-Live Demo: https://aweishar.github.io/portfolio/
+https://aweishar.github.io/portfolio/
