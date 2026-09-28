@@ -1,0 +1,20 @@
+.ml-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 24px;
+    padding: 20px 24px;
+    margin: 0 0 20px;
+    font: 14px/1.5 system-ui, sans-serif;
+    background: #f5f5f5;
+    color: #262626;
+    border-bottom: 1px solid #d4d4d4;
+}
+.ml-navigation a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.ml-navigation a[aria-current="page"] { font-weight: 700; text-decoration-thickness: 2px; }
+.ml-navigation a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.dark .ml-navigation { background: #171717; color: #e5e5e5; border-color: #404040; }
