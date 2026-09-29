@@ -1,0 +1,16 @@
+.project-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 24px;
+    margin-bottom: 20px;
+    font: 14px/1.5 Inter, system-ui, sans-serif;
+}
+.project-navigation a, .code-download a { text-decoration: underline; text-underline-offset: 3px; }
+.project-navigation a[aria-current="page"] { font-weight: 700; }
+.project-navigation a:focus-visible, .code-download a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+main.container { max-width: 1200px; }
+video, #picture img { display: block; max-height: 75vh; object-fit: contain; }
+.ai-note { padding: 12px 16px; margin-bottom: 16px; background: #243044; color: #dce4ef; border-left: 3px solid #e7be70; border-radius: 4px; }
+.code-download { margin-bottom: 16px; }
+pre { overflow: auto; max-height: 75vh; }

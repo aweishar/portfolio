@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="academic-page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino: Dino Jump — Picture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    // Overrides 'gray' with 'neutral' for true grey look
+                    colors: {
+                        gray: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="../project-page.css" rel="stylesheet" />
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Smooth transition for theme switching */
+        body, div, header, h1, h2, section {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+    </style>
+    <link rel="stylesheet" href="../../assets/academic.css">
+    <script src="../../assets/academic.js"></script>
+</head>
+<body class="antialiased bg-gray-50 dark:bg-neutral-950 dark:text-neutral-100 transition-colors duration-300">
+    <header class="academic-header">
+        <div class="academic-header-inner">
+            <a class="academic-brand" href="../../index.html">Andrew<span>.dev</span></a>
+            <nav class="academic-tabs"  aria-label="Project navigation">
+                <a href="../../index.html#in-school-projects">← Back to portfolio</a>
+                <a href="DinoJump.html">Video</a>
+                <a href="picture.html" aria-current="page">Picture</a>
+                <a href="source.html">Code</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <header class="bg-white dark:bg-neutral-900 shadow-sm transition-colors duration-300">
+        <div class="container mx-auto px-4 py-6">
+            
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white text-center">Arduino: Dino Jump</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+
+        
+
+        <section id="picture" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Picture</h2>
+            <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-300">
+                <img src="DinoJump.jpg" alt="Arduino Dino Jump Project" class="w-full object-cover">
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    
+
+</body>
+</html>

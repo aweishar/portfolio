@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="academic-page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Odometer — Interactive Arduino Binary Lights</title>
+    <link rel="stylesheet" href="odometer.css">
+    <script src="odometer.js" defer></script>
+    <link rel="stylesheet" href="../../assets/academic.css">
+    <script src="../../assets/academic.js"></script>
+</head>
+<body>
+    <header class="academic-header">
+        <div class="academic-header-inner">
+            <a class="academic-brand" href="../../index.html">Andrew<span>.dev</span></a>
+            <nav class="academic-tabs" aria-label="Project navigation">
+            <a href="../../index.html#in-school-projects">← Back to portfolio</a>
+            <a href="BinaryLights.html">Video</a>
+            <a href="picture.html">Picture</a>
+            <a href="source.html">Code</a>
+            <a href="odometer.html" aria-current="page">Binary Odometer</a>
+        </nav>
+        </div>
+    </header>
+
+    <header>
+        
+        <p class="eyebrow">ARDUINO · TRY IT YOURSELF</p>
+        <h1>Binary odometer</h1>
+        <p class="intro">Type a decimal number on the remote, then press <strong>▶Ⅱ</strong> to light up its binary value. Twelve LEDs. Numbers from 0 to 4095.</p>
+    </header>
+    <main>
+        <section class="experiment" aria-labelledby="lights-title">
+            <div class="section-heading"><h2 id="lights-title">The light row</h2><span>12-bit display</span></div>
+            <div class="board-scroll" tabindex="0" aria-label="LED breadboard; scroll horizontally on small screens">
+                <div class="breadboard">
+                    <div class="rail positive" aria-hidden="true">+ <span></span> +</div>
+                    <div class="led-row" role="img" aria-label="12 LEDs, all off">
+                    <div class="led-cell green" data-bit="11"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">2048</span></div>
+                    <div class="led-cell green" data-bit="10"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">1024</span></div>
+                    <div class="led-cell green" data-bit="9"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">512</span></div>
+                    <div class="led-cell green" data-bit="8"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">256</span></div>
+                    <div class="led-cell red" data-bit="7"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">128</span></div>
+                    <div class="led-cell red" data-bit="6"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">64</span></div>
+                    <div class="led-cell red" data-bit="5"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">32</span></div>
+                    <div class="led-cell red" data-bit="4"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">16</span></div>
+                    <div class="led-cell yellow" data-bit="3"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">8</span></div>
+                    <div class="led-cell yellow" data-bit="2"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">4</span></div>
+                    <div class="led-cell yellow" data-bit="1"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">2</span></div>
+                    <div class="led-cell yellow" data-bit="0"><span class="led" aria-hidden="true"></span><span class="bit">0</span><span class="weight">1</span></div>
+                    </div>
+                    <div class="rail negative" aria-hidden="true">− <span></span> −</div>
+                </div>
+            </div>
+            <p class="board-caption">Each lit LED adds the value beneath it. Green, red, and yellow groups mirror the project’s light row.</p>
+            <div class="readouts">
+                <div><span>Displayed decimal</span><output id="displayed">0</output></div>
+                <div><span>Displayed binary</span><output id="binary">0000 0000 0000</output></div>
+            </div>
+            <p id="sum" class="sum">All lights are off.</p>
+            <div class="instructions">
+                <h2>Use it like the real project</h2>
+                <ol>
+                    <li>Enter digits using the remote or your keyboard.</li>
+                    <li>Press <strong>▶Ⅱ / Enter</strong> to display the number.</li>
+                    <li>Press <strong>⏻ / Escape</strong> to clear the entry and lights.</li>
+                </ol>
+                <p>The lights keep their previous value while you enter the next number. Displaying a number resets the entry to zero.</p>
+            </div>
+            <details>
+                <summary>About this recreation</summary>
+                <p>This browser simulation follows the supplied Arduino sketch, including its entry rule: when the pending number is already 409 or greater, the next digit sets it to 4095. For example, entering 4090 displays 4095 when finalized.</p>
+                <p>The remote uses a common Arduino kit layout. Only the digits, power (Clear), and play/pause (Display) are used by this project; the other buttons are inactive.</p>
+                <p>Bit values run from 2048 on the left to 1 on the right. The sketch defines pin order; the physical orientation is represented here in standard binary reading order.</p>
+            </details>
+        </section>
+        <section class="controller" aria-labelledby="remote-title">
+            <h2 id="remote-title">IR remote</h2>
+            <div class="entry"><label for="entry-value">Pending number</label><output id="entry-value">0</output><span>Press ▶Ⅱ to display</span></div>
+            <div class="remote">
+                <div class="remote-sensor" aria-hidden="true"></div>
+                <p class="remote-brand">IR CONTROL</p>
+                <div class="keypad">
+                    <button type="button" class="red-key" aria-label="Power / Clear" data-key="clear">⏻</button>
+                    <button type="button" class="" aria-label="Volume up — unused" disabled>VOL+</button>
+                    <button type="button" class="" aria-label="Function / Stop — unused" disabled>FUNC/STOP</button>
+                    <button type="button" class="" aria-label="Previous — unused" disabled>⏮</button>
+                    <button type="button" class="blue-key" aria-label="Play / Pause — Display number" data-key="finalize">▶Ⅱ</button>
+                    <button type="button" class="" aria-label="Next — unused" disabled>⏭</button>
+                    <button type="button" class="" aria-label="Down — unused" disabled>↓</button>
+                    <button type="button" class="" aria-label="Volume down — unused" disabled>VOL−</button>
+                    <button type="button" class="" aria-label="Up — unused" disabled>↑</button>
+                    <button type="button" class="" aria-label="0" data-key="0">0</button>
+                    <button type="button" class="" aria-label="Equalizer — unused" disabled>EQ</button>
+                    <button type="button" class="" aria-label="Repeat — unused" disabled>ST/REPT</button>
+                    <button type="button" class="" aria-label="1" data-key="1">1</button>
+                    <button type="button" class="" aria-label="2" data-key="2">2</button>
+                    <button type="button" class="" aria-label="3" data-key="3">3</button>
+                    <button type="button" class="" aria-label="4" data-key="4">4</button>
+                    <button type="button" class="" aria-label="5" data-key="5">5</button>
+                    <button type="button" class="" aria-label="6" data-key="6">6</button>
+                    <button type="button" class="" aria-label="7" data-key="7">7</button>
+                    <button type="button" class="" aria-label="8" data-key="8">8</button>
+                    <button type="button" class="" aria-label="9" data-key="9">9</button>
+                </div>
+                <p class="remote-footer">BINARY LIGHTS · 12 LED</p>
+            </div>
+            <p id="status" role="status" aria-live="polite">Ready. Enter a number to begin.</p>
+        </section>
+        <noscript>This interactive recreation requires JavaScript. You can still watch the video or view the Arduino code using the links above.</noscript>
+    </main>
+</body>
+</html>
