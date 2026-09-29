@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="academic-page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Player Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../game-embed.css">
+    <link rel="stylesheet" href="../game-navigation.css?v=2">
+    <link rel="stylesheet" href="../../assets/academic.css">
+    <script src="../../assets/academic.js"></script>
+    <link rel="stylesheet" href="../game-fullscreen.css">
+</head>
+<body>
+    <header class="academic-header">
+        <div class="academic-header-inner">
+            <a class="academic-brand" href="../../index.html">Andrew<span>.dev</span></a>
+            <nav class="academic-tabs"  aria-label="Game navigation">
+            <a href="../../index.html#in-school-projects">← Back to portfolio</a>
+            <a href="2playersnake.html" aria-current="page">Play Game</a>
+            <a href="source.html">Show Code</a>
+        </nav>
+        </div>
+    </header>
+
+    <header class="game-page-header">
+        
+        <p class="conversion-note"><strong>AI conversion notice:</strong> This game was originally written in Java. Artificial intelligence was used to convert it to HTML, CSS, and JavaScript. The converted version may have minor issues or differences in behavior that were not present in the original Java game.</p>
+    </header>
+    <section class="game-stage" tabindex="-1" aria-label="Fullscreen game">
+        <div class="game-controls"><span>Press <kbd>Esc</kbd> to pause and exit fullscreen</span></div>
+        <div class="game-viewport"><div class="game-content" inert>
+    <h1>Snake Game: 2 Player</h1>
+    <canvas id="gameCanvas"></canvas>
+
+        </div></div>
+        <div class="game-gate">
+            <div class="game-gate-card">
+            <h2>Play in fullscreen</h2>
+            <p>Enter fullscreen to play. Press Esc to pause and exit fullscreen.</p>
+            <button type="button" class="game-enter">Enter fullscreen to play</button>
+            <p class="game-fullscreen-status" role="status"></p>
+            </div>
+        </div>
+    </section>
+    <script src="../game-fullscreen.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
