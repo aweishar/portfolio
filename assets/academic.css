@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+
+/* Shared portfolio palette and layout for all academic project views. */
+.academic-page *, .academic-page *::before, .academic-page *::after { box-sizing: border-box; }
+html.academic-page {
+    color-scheme: light;
+    --page: #f9fafb;
+    --surface: #ffffff;
+    --inset: #f3f4f6;
+    --ink: #111827;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --accent: #2563eb;
+    --jp-layout-color0: var(--page);
+    --jp-layout-color1: var(--surface);
+    --jp-layout-color2: var(--inset);
+    --jp-cell-editor-background: var(--surface);
+    --jp-cell-editor-active-background: var(--inset);
+    --jp-border-color1: var(--line);
+    --jp-border-color2: var(--line);
+    background: var(--page);
+}
+html.academic-page.dark {
+    color-scheme: dark;
+    --page: #030712;
+    --surface: #111827;
+    --inset: #1f2937;
+    --ink: #f9fafb;
+    --muted: #9ca3af;
+    --line: #262626;
+    --accent: #60a5fa;
+}
+.academic-page body {
+    display: block; width: 100%; max-width: none; min-height: 100vh; height: auto;
+    margin: 0; padding: 0 0 48px; background: var(--page); color: var(--ink);
+    font: 15px/1.65 'Inter', sans-serif;
+}
+.academic-page h1, .academic-page h2, .academic-page h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif; color: var(--ink); text-shadow: none;
+}
+.academic-page h1 { font-size: clamp(26px, 4vw, 40px); line-height: 1.2; letter-spacing: -.035em; margin: 24px 0; }
+.academic-page a { color: var(--accent); }
+.academic-page :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.academic-page .academic-header {
+    position: sticky; top: 0; z-index: 100; width: 100%; max-width: none;
+    margin: 0 0 32px; padding: 0; background: var(--surface);
+    border-bottom: 1px solid var(--line); box-shadow: none;
+}
+.academic-header-inner { max-width: 1200px; margin: auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.academic-page .academic-brand { color: var(--ink); font-size: 24px; font-weight: 700; letter-spacing: -.04em; text-decoration: none; }
+.academic-brand span { color: var(--accent); }
+.academic-page .academic-tabs { display: flex; flex: 1 0 100%; gap: 8px; flex-wrap: wrap; margin: 0; padding: 0; text-align: left; }
+.academic-page .academic-tabs a, .academic-page a[download], .academic-page .source-files a {
+    display: inline-flex; align-items: center; padding: 8px 14px; border: 1px solid var(--line);
+    border-radius: 999px; background: var(--surface); color: var(--ink);
+    font: 600 13px/1.5 'Inter', sans-serif; text-decoration: none;
+}
+.academic-page .academic-tabs a:hover, .academic-page a[download]:hover, .academic-page .source-files a:hover { background: var(--inset); color: var(--accent); }
+.academic-page .academic-tabs a[aria-current="page"], .academic-page .source-files a[aria-current="true"] { background: #2563eb; border-color: #2563eb; color: white; }
+.academic-page body > header:not(.academic-header), .academic-page main, .academic-page .workspace, .academic-page .notebook-toolbar {
+    width: calc(100% - 48px); max-width: 1152px; margin: 0 auto 28px; padding: 0;
+}
+.academic-page body > header:not(.academic-header) { background: transparent; box-shadow: none; }
+.academic-page body > header:not(.academic-header) > .container { max-width: none; padding: 0; }
+.academic-page .source-panel, .academic-page .experiment, .academic-page .entry,
+.academic-page main .bg-white { background: var(--surface) !important; color: var(--ink); border: 1px solid var(--line); border-radius: 20px; }
+.academic-page .panel-header { border-color: var(--line); }
+.academic-page .file-toolbar, .academic-page .readouts > div { background: var(--inset); color: var(--ink); }
+.academic-page .panel-header p, .academic-page #source-status, .academic-page .intro,
+.academic-page .board-caption, .academic-page .section-heading span, .academic-page .readouts span,
+.academic-page .entry label, .academic-page .entry > span, .academic-page .instructions p, .academic-page details { color: var(--muted); }
+.academic-page .eyebrow, .academic-page .sum, .academic-page .entry output { color: var(--accent); }
+.academic-page .conversion-note, .academic-page .ai-note { background: var(--surface); color: var(--muted); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 12px; padding: 16px 20px; }
+.academic-page #source-viewer, .academic-page pre[class*="language-"], .academic-page code[class*="language-"] { background: var(--surface); color: var(--ink); text-shadow: none; }
+.academic-page .token.comment { color: var(--muted); }
+.academic-page .token.keyword, .academic-page .token.operator { color: var(--accent); }
+.academic-page .token.string { color: #15803d; }
+.academic-page.dark .token.string { color: #86efac; }
+.academic-page #csv-display th, .academic-page .jp-RenderedHTMLCommon tbody tr:nth-child(even) { background: var(--inset); color: var(--ink); border-color: var(--line); }
+.academic-page #csv-display td, .academic-page .jp-RenderedHTMLCommon table { color: var(--ink); border-color: var(--line); }
+.academic-page .jp-RenderedHTMLCommon tbody tr:nth-child(odd) { background: var(--surface); }
+.academic-page .jp-RenderedText pre { color: var(--ink); }
+.academic-page body > canvas, .academic-page body > .game-container { margin: 24px auto; max-width: calc(100% - 32px); }
+.academic-page body > .game-container { width: fit-content; }
+.academic-page body > #container { margin: 24px auto; }
+.academic-page #loadingMessage { text-align: center; }
+.academic-page .notebook-toolbar { justify-content: flex-start; border: 0; }
+@media (max-width: 640px) {
+    .academic-header-inner { padding: 12px 16px; gap: 12px; }
+    .academic-page .academic-tabs { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+    .academic-page .academic-tabs a { flex-shrink: 0; }
+    .academic-page body > header:not(.academic-header), .academic-page main, .academic-page .workspace, .academic-page .notebook-toolbar { width: calc(100% - 32px); }
+    .academic-page .academic-header { position: relative; }
+}
