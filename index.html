@@ -104,7 +104,7 @@
             <div class="flex items-center gap-8">
                 <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
                     <a href="#about" class="text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">About</a>
-                    <a href="#skills" class="text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">Skills</a>
+                    <a href="#featured-project" class="text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">Featured Project</a>
                     <a href="#cybersecurity" class="text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">Cybersecurity</a>
                     <a href="#in-school-projects" class="text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">In-School Projects</a>
                     <a href="#outside-projects" class="text-xs lg:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors">Independent Projects</a>
@@ -175,46 +175,142 @@
         </div>
     </section>  
     
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 bg-white dark:bg-neutral-950">
+    <!-- Featured Project Section -->
+    <section id="featured-project" class="py-24 bg-white dark:bg-neutral-950">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">Technical Skills</h2>
-            
-            <div class="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
-                <!-- Skill Card Component -->
-                <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(20%-1.2rem)] bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
-                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
-                        <i data-lucide="coffee" class="w-8 h-8"></i>
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center gap-2 rounded-full border border-brand-500/20 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">
+                    <span class="h-2 w-2 rounded-full bg-brand-500"></span>
+                    In Progress
+                </span>
+                <h2 class="mt-4 text-3xl font-bold text-gray-900 dark:text-white">Featured Project: Autonomous Delivery Rover</h2>
+                <p class="mt-4 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">A small autonomous rover designed in CAD, built from 3D-printed prototypes, and programmed with Arduino to deliver a package while avoiding obstacles.</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto overflow-hidden rounded-3xl border border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900">
+                <div class="grid lg:grid-cols-5">
+                    <div class="lg:col-span-3 min-h-72 bg-gradient-to-br from-brand-100 via-gray-100 to-cyan-100 dark:from-brand-950/50 dark:via-neutral-900 dark:to-cyan-950/40 flex items-center justify-center p-8">
+                        <div class="w-full max-w-xl rounded-2xl border-2 border-dashed border-brand-400/60 dark:border-brand-500/40 bg-white/70 dark:bg-neutral-950/50 px-6 py-12 text-center">
+                            <i data-lucide="box" class="mx-auto h-12 w-12 text-brand-500"></i>
+                            <p class="mt-4 font-semibold text-gray-800 dark:text-gray-200">CAD render / current rover photo</p>
+                            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">Upload the main project image to:</p>
+                            <code class="mt-1 inline-block text-xs text-brand-700 dark:text-brand-300">Images/Rover/rover-cad-render.png</code>
+                        </div>
                     </div>
-                    <h3 class="font-semibold text-gray-900 dark:text-white">Java</h3>
+
+                    <div class="lg:col-span-2 p-7 md:p-9">
+                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-600 dark:text-brand-400">Project goal</p>
+                        <h3 class="mt-2 text-2xl font-bold text-gray-900 dark:text-white">Design. Build. Test. Iterate.</h3>
+                        <p class="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">I am designing a rover chassis and component layout in CAD, then making 3D-printed prototypes to check fitment. I will document what fits, what needs adjustment, and how each revision improves the build.</p>
+                        <p class="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">The planned Arduino-controlled rover will navigate autonomously, detect and avoid obstacles, and release a package at its destination.</p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-white px-3 py-1 text-xs font-medium text-gray-600 dark:bg-neutral-800 dark:text-gray-300">CAD Design</span>
+                            <span class="rounded-full bg-white px-3 py-1 text-xs font-medium text-gray-600 dark:bg-neutral-800 dark:text-gray-300">3D Printing</span>
+                            <span class="rounded-full bg-white px-3 py-1 text-xs font-medium text-gray-600 dark:bg-neutral-800 dark:text-gray-300">Arduino</span>
+                            <span class="rounded-full bg-white px-3 py-1 text-xs font-medium text-gray-600 dark:bg-neutral-800 dark:text-gray-300">Autonomous Navigation</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(20%-1.2rem)] bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
-                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
-                        <i data-lucide="file-code" class="w-8 h-8"></i>
+                <div class="border-t border-gray-200 dark:border-neutral-800 p-7 md:p-9">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Build plan</h3>
+                    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                        <div class="rounded-xl bg-white dark:bg-neutral-950 p-5">
+                            <i data-lucide="drafting-compass" class="h-6 w-6 text-brand-500"></i>
+                            <h4 class="mt-3 font-semibold text-gray-900 dark:text-white">1. CAD design</h4>
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Design the chassis, package bay, sensor mounts, and component layout.</p>
+                        </div>
+                        <div class="rounded-xl bg-white dark:bg-neutral-950 p-5">
+                            <i data-lucide="printer" class="h-6 w-6 text-brand-500"></i>
+                            <h4 class="mt-3 font-semibold text-gray-900 dark:text-white">2. Prototype & fit</h4>
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">3D-print parts, check clearances, and revise any components that do not fit.</p>
+                        </div>
+                        <div class="rounded-xl bg-white dark:bg-neutral-950 p-5">
+                            <i data-lucide="cpu" class="h-6 w-6 text-brand-500"></i>
+                            <h4 class="mt-3 font-semibold text-gray-900 dark:text-white">3. Arduino control</h4>
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Write and test firmware for movement, obstacle sensing, and package release.</p>
+                        </div>
+                        <div class="rounded-xl bg-white dark:bg-neutral-950 p-5">
+                            <i data-lucide="route" class="h-6 w-6 text-brand-500"></i>
+                            <h4 class="mt-3 font-semibold text-gray-900 dark:text-white">4. Autonomous run</h4>
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Test navigation and package delivery, then record results and improvements.</p>
+                        </div>
                     </div>
-                    <h3 class="font-semibold text-gray-900 dark:text-white">HTML</h3>
                 </div>
 
-                <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(20%-1.2rem)] bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
-                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
-                        <i data-lucide="palette" class="w-8 h-8"></i>
+                <div class="border-t border-gray-200 dark:border-neutral-800 p-7 md:p-9">
+                    <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Project files & documentation</h3>
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Add your files at these paths; the slots below are ready to fill as the project develops.</p>
+                        </div>
+                        <span class="text-xs text-gray-400 dark:text-gray-500">Suggested upload locations</span>
                     </div>
-                    <h3 class="font-semibold text-gray-900 dark:text-white">CSS</h3>
-                </div>
 
-                <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(20%-1.2rem)] bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
-                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
-                        <i data-lucide="brackets" class="w-8 h-8"></i>
+                    <div class="mt-6 grid gap-4 md:grid-cols-2">
+                        <div class="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-5">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="image" class="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-500"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">CAD renders and revisions</h4>
+                                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Upload an overall CAD view and updated renders as the design changes.</p>
+                                    <code class="mt-2 block break-all text-xs text-brand-700 dark:text-brand-300">Images/Rover/rover-cad-render.png</code>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-5">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="camera" class="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-500"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Prototype and fitment photos</h4>
+                                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Add numbered photos showing printed parts, assembly, and fitment changes.</p>
+                                    <code class="mt-2 block break-all text-xs text-brand-700 dark:text-brand-300">Images/Rover/prototype-01.jpg</code>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-5">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="file-code-2" class="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-500"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Arduino firmware</h4>
+                                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Upload the main sketch and any supporting code when available.</p>
+                                    <code class="mt-2 block break-all text-xs text-brand-700 dark:text-brand-300">Arduino/Rover/Rover.ino</code>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-5">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="notebook-pen" class="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-500"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Fitment & iteration log</h4>
+                                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">For each issue, record the part, expected fit, observed issue, change made, and result.</p>
+                                    <code class="mt-2 block break-all text-xs text-brand-700 dark:text-brand-300">Rover/fitment-log.md</code>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-5 md:col-span-2">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="video" class="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-500"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Obstacle avoidance and delivery demo</h4>
+                                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Add a short video of the rover navigating around an obstacle and releasing its package.</p>
+                                    <code class="mt-2 block break-all text-xs text-brand-700 dark:text-brand-300">Videos/rover-delivery-demo.mp4</code>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-semibold text-gray-900 dark:text-white">JavaScript</h3>
-                </div>
 
-                <div class="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(20%-1.2rem)] bg-gray-50 dark:bg-neutral-900 p-6 rounded-xl text-center group border border-gray-100 dark:border-neutral-800 hover:border-brand-500/30 dark:hover:border-brand-500/30 transition-all duration-300">
-                    <div class="mb-4 text-gray-500 dark:text-gray-400 group-hover:text-brand-600 dark:group-hover:text-brand-400 group-hover:scale-110 transition-all duration-300 flex justify-center">
-                        <i data-lucide="code-2" class="w-8 h-8"></i>
+                    <div class="mt-6 rounded-xl border border-dashed border-brand-500/30 bg-brand-50/60 p-5 dark:bg-brand-500/5">
+                        <h4 class="font-semibold text-gray-900 dark:text-white">Fitment log entry template</h4>
+                        <div class="mt-3 grid gap-2 text-sm text-gray-600 dark:text-gray-300 sm:grid-cols-2">
+                            <p><strong class="text-gray-900 dark:text-white">Date / revision:</strong> [Add date and CAD revision]</p>
+                            <p><strong class="text-gray-900 dark:text-white">Part tested:</strong> [Name the printed part]</p>
+                            <p><strong class="text-gray-900 dark:text-white">Expected fit:</strong> [What should fit or move?]</p>
+                            <p><strong class="text-gray-900 dark:text-white">Issue observed:</strong> [Describe the interference or gap]</p>
+                            <p><strong class="text-gray-900 dark:text-white">Change made:</strong> [Describe the CAD / print adjustment]</p>
+                            <p><strong class="text-gray-900 dark:text-white">Retest result:</strong> [Record whether the change worked]</p>
+                        </div>
                     </div>
-                    <h3 class="font-semibold text-gray-900 dark:text-white">Python</h3>
                 </div>
             </div>
         </div>
