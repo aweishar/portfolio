@@ -1,0 +1,118 @@
+/* Viewport dimensions are evaluated continuously by the browser. */
+:root {
+    --header-height: 77px;
+    --page-gutter: clamp(1rem, 3vw, 2rem);
+}
+
+body .container {
+    width: 100%;
+    max-width: 80rem;
+    padding-inline: var(--page-gutter);
+}
+
+body section[id] {
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+body section:not(#hero) {
+    padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+body #hero {
+    padding-top: calc(var(--header-height) + clamp(3rem, 8vw, 7rem));
+    padding-bottom: clamp(3rem, 8vw, 8rem);
+}
+
+body #hero h1 {
+    font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+    overflow-wrap: anywhere;
+}
+
+body #hero [class*="blur-"] {
+    filter: none;
+    background-color: transparent;
+    background-image: radial-gradient(circle, rgb(59 130 246 / .1), transparent 70%);
+}
+
+body #about .container > div {
+    width: min(100%, 56rem);
+    padding: clamp(1.5rem, 5vw, 4rem);
+}
+
+body .grid.md\:grid-cols-2 {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(22rem, 45%)), 1fr));
+    gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+body .grid > *, body .flex-1 {
+    min-width: 0;
+}
+
+body .grid .p-8 {
+    padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+#site-header .desktop-menu {
+    display: flex;
+    white-space: nowrap;
+}
+
+#site-header > nav:first-child {
+    height: calc(var(--header-height) - 1px);
+}
+
+/* Avoid transitions on dimensions and shadows during continuous resizing. */
+body .transition-all {
+    transition-property: color, background-color, border-color, opacity, transform;
+}
+
+#site-header .nav-actions {
+    gap: clamp(.5rem, 2vw, 2rem);
+}
+
+#site-header button {
+    min-width: 44px;
+    min-height: 44px;
+    flex-shrink: 0;
+}
+
+#site-header .compact-menu-toggle, #compact-menu[hidden] {
+    display: none;
+}
+
+#compact-menu {
+    max-height: calc(100dvh - var(--header-height));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+#compact-menu a {
+    display: block;
+    padding: .75rem 1rem;
+    border-radius: .75rem;
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+#compact-menu a:hover, #compact-menu a:focus-visible {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.dark #compact-menu a:hover, .dark #compact-menu a:focus-visible {
+    background: #1f2937;
+    color: #60a5fa;
+}
+
+@media (max-width: 47.999rem), (max-width: 64rem) and (max-aspect-ratio: 1/1) {
+    #site-header .desktop-menu { display: none; }
+    #site-header .compact-menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+}
+
+/* Keep content within reach in a short landscape tab. */
+@media (max-height: 35rem) and (min-aspect-ratio: 3/2) {
+    :root { --header-height: 61px; }
+    #site-header > nav:first-child { padding-block: .5rem; }
+    body #hero { padding-top: calc(var(--header-height) + 2rem); padding-bottom: 2rem; }
+    body section:not(#hero) { padding-block: 3rem; }
+}
