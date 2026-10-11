@@ -40,8 +40,21 @@ body #about .container > div {
 }
 
 body .grid.md\:grid-cols-2 {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(22rem, 45%)), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, max(22rem, 45%)), 1fr));
     gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+/* A lone project keeps the same bounds as cards in a populated row. */
+body .grid > .group {
+    width: 100%;
+    max-width: 37rem;
+    align-self: start;
+}
+
+body .grid > .group > .aspect-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 20.8125rem;
 }
 
 body .grid > *, body .flex-1 {
