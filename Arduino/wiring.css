@@ -1,0 +1,11 @@
+
+.wiring-intro { max-width: 760px; color: var(--muted); }
+.wiring-panel { margin: 28px 0; padding: clamp(16px,3vw,28px); background: var(--surface); border: 1px solid var(--line); border-radius: 20px; }
+.wiring-scroll { overflow-x: auto; }
+.wiring-scroll img { display: block; width: 100%; min-width: 700px; height: auto; }
+.wiring-panel figcaption { margin-top: 14px; color: var(--muted); }
+.wiring-table { width:100%; border-collapse:collapse; font-size:14px; }
+.wiring-table th, .wiring-table td { text-align:left; padding:12px; border-bottom:1px solid var(--line); }
+.wiring-table th { background:var(--inset); }
+.wiring-reference { display:block; width:100%; max-height:540px; object-fit:contain; border-radius:12px; }
+.wiring-panel li { margin:10px 0; }
