@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="academic-page" lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Arduino: Sonar</title><link rel="stylesheet" href="../../assets/academic.css"><link rel="stylesheet" href="../wiring.css"><script src="../../assets/academic.js"></script></head>
+<body><header class="academic-header"><div class="academic-header-inner"><a class="academic-brand" href="../../index.html">Andrew<span>.dev</span></a><nav class="academic-tabs" aria-label="Project navigation"><a href="../../index.html#in-school-projects">← Back to portfolio</a><a href="Sonar.html">Video</a><a href="picture.html">Picture</a><a href="source.html">Code</a><a href="wiring.html" aria-current="page">Wiring Diagram</a></nav></div></header>
+<main><h1 style="text-align: center">Arduino: Sonar</h1>
+<p class="wiring-intro">Connection guide based on Sonar.ino and the build photograph. Signal pins match the sketch; component placement is arranged for readability.</p>
+<p class="ai-note"><strong>AI assistance:</strong> This wiring diagram was created using artificial intelligence, based on the project’s code and reference photograph.</p>
+<figure class="wiring-panel"><div class="wiring-scroll"><img src="wiring.svg" alt="Sonar wiring: Uno D10 to ultrasonic TRIG, D11 to ECHO, D9 to servo signal, with shared power and ground rails."></div><figcaption>Illustrated connections for the ultrasonic sensor and micro servo. Read component pin labels rather than inferring pin order from the illustration. <a href="wiring.svg" download>Download diagram (SVG)</a></figcaption></figure>
+<section class="wiring-panel"><h2>Pin connections</h2><div class="wiring-scroll"><table class="wiring-table"><thead><tr><th scope="col">Arduino pin</th><th scope="col">Connect to</th></tr></thead><tbody>
+<tr><th scope="row">D10</th><td>Ultrasonic sensor TRIG</td></tr>
+<tr><th scope="row">D11</th><td>Ultrasonic sensor ECHO</td></tr>
+<tr><th scope="row">D9</th><td>Servo signal</td></tr>
+<tr><th scope="row">5 V rail</th><td>Ultrasonic VCC and servo positive supply (confirm component ratings)</td></tr>
+<tr><th scope="row">GND</th><td>Common ground for sensor, servo, and Arduino</td></tr>
+</tbody></table></div></section>
+<section class="wiring-panel"><h2>Build notes</h2><ul>
+<li>The servo starts at 90° and sweeps between 0° and 180°.</li>
+<li>The Arduino sends angle and distance in centimeters over USB serial at 9600 baud. Open the Processing 4 sketch and select the Arduino port to view readings.</li>
+<li>The sketch reports distances from 2 to 200 cm; a value of -1 indicates an invalid reading.</li>
+<li>The photo shows an Uno-compatible board, breadboard, ultrasonic module, and micro servo. The diagram illustrates a shared 5 V rail; confirm the sensor and servo ratings. If the servo needs a separate regulated supply, connect its ground to Arduino GND and keep its positive supply separate from the Uno 5 V pin.</li>
+<li>Servo signal is typically orange or yellow, positive red, and ground brown or black; verify your servo’s labeling. Disconnect power before changing wiring.</li>
+</ul><p>Reference: <a href="source.html">Arduino and Processing 4 code</a>.</p></section>
+<section class="wiring-panel"><h2>Build reference</h2><a href="picture.html"><img class="wiring-reference" src="Sonar.JPG" alt="Photograph of the assembled Arduino Sonar project" loading="lazy"></a></section>
+</main></body></html>
